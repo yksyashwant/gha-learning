@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: multiple_shell_commands
         run: |
-        echo "this is line one"
-        ehco "this is the 2nd line"
+          echo "this is line one"
+          ehco "this is the 2nd line"
         
     
