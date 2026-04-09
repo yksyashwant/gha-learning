@@ -1,0 +1,19 @@
+name: multiple jobs in single workflow
+on: push
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Build step
+       run: echo " Running a Demo Build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test cases
+        run: echo " Running test cases"
+  Deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Deploy the code
+       run: echo "deploying the code"
+       
