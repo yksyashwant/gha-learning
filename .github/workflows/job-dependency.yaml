@@ -1,0 +1,24 @@
+#one job is finish then only 2nd job will start 
+name: Job dependency
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build step
+        run: echo "build step is running"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: test case is running
+        run: echo "test case is running"
+  deploy:
+    runs-on: ubuntu-slim
+    needs: test
+    timeout-minutes: 2
+    steps:
+      - name: deploy the code
+        run: echo "code is deploying"
+        
+  
