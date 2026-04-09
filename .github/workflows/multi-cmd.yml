@@ -1,0 +1,12 @@
+name: running multiple shell commands
+on: workflow_dispatch
+jobs:
+  multiple_shell_cmds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: multiple_shell_commands
+        run: |
+        echo "this is line one"
+        ehco "this is the 2nd line"
+        
+    
