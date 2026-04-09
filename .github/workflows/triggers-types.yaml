@@ -4,7 +4,15 @@
 #push and pull_request triggers
 
 name: trigger-types
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - develop
+      - 'relese/**'
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
    runs-on: ubuntu-latest
