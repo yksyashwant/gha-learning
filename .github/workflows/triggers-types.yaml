@@ -1,3 +1,4 @@
+# In Git hub triggers are defiend using `ON`  keyword 
 # There are multiple types of trigger 
 # 1.Event based trigger # 2. Manual Trigger
 # 3. scheduled Trigger # 4. Workflow trigger
