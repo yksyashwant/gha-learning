@@ -1,6 +1,5 @@
 # Variables in workflows 
 #Variables are used to store nonsensitive information, Secrets are used to store sensitive data 
-
 name: workflow variables
 on: push
 jobs:
