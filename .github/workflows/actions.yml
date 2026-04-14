@@ -1,0 +1,18 @@
+# Action in Github workflows Actions are prewritten and available in marketplace
+# Actions are configurables it can take input and gives output 
+#Actions can perform tasks such as:
+        ## Pulling your Git repository from GitHub
+        ##Setting up the correct toolchain for your build environment
+        ##Setting up authentication to your cloud provider
+
+name: GitHub Actions Demo
+on: push
+jobs:
+    action-demo:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout the code
+            uses: actions/checkout@v6
+          - name: print index.html
+            run: cat index.html
+            
