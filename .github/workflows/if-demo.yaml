@@ -14,8 +14,8 @@ jobs:
         if: github.ref_name == 'main'
         run: echo " Running if condition step for main branch"
       - name: Run for yksyashwant or yashwant
-        if: github.actor == ' yksyashwant' || github.actor == 'yashwant'
-        run: echo "this is trigger by $github.actor"
+        if: github.actor == 'yksyashwant' || github.actor == 'yashwant'
+        run: echo "this is trigger by ${{ github.actor }}"
 
 
 
