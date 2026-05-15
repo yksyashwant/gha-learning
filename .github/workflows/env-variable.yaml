@@ -1,13 +1,18 @@
 ## environment variables are key value pair 
 ## its used when we deploy the code in different env and key is same and values are changing based on environment like dev,test etc.
+## we can configure the env variables at workflow lavel, job lavel and step lavel 
 
 name: Environment variables demo
 on: 
     workflow_dispatch
 env:
+    #env variable at workflow  lavel 
     APP_ENV: "DEV"
 jobs:
     environment-variables-demo:
+        #env variable at job level 
+        env:
+            APP_ENV: "STG-env var at job lavel"
         runs-on: ubuntu-latest
         steps:
             - name: Connecting to env
