@@ -7,7 +7,7 @@ on:
       - main
       - develop
 jobs:
-  if-demo:
+  condition demo:
     runs-on: ubuntu-latest
     steps:
       - name: Run if branch is main 
