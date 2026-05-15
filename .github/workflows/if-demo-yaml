@@ -1,6 +1,6 @@
 # we can use the if condition statement to check weather the steps/jobs should run or not based on some conditions
 
-name: If Demo
+name: condition Demo
 on: 
   push:
     branches:
