@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Run if branch is main 
         if: {{ github.ref == 'refs/heads/main'}}
-        run: echo " Running if condition step"
+        run: echo " Running if condition step for main branch"
       - name: Run this step
         run: echo "Running this step"
 
