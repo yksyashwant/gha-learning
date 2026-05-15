@@ -5,14 +5,22 @@
 name: Output-Demo
 on: push
 jobs:
-  job1:
+  build:
+    outputs:
+      version: ${{ steps.step1.outputs.version }}
     runs-on: ubuntu-latest
     steps:
-      - name: step-one
+      - name: build step
         id: step1
         run: echo "version=0.0.1" >> $GITHUB_OUTPUT
-      - name: step two
-        run: echo "This version is ${{ steps.step1.outputs.version }}"
+     # - name: step two
+      #  run: echo "This version is ${{ steps.step1.outputs.version }}"
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the app
+        run: echo "Deploying the app with version ${{ needs.build.outputs.version }}"    
 
 
     
