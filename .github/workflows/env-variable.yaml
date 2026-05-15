@@ -16,6 +16,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Connecting to env
+            #env variable at step level 
+              env: 
+                APP_ENV: "PROD-env var configured at step level"
               run: echo "App is connecting to $APP_ENV"
 
 
