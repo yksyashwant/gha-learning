@@ -1,0 +1,18 @@
+## environment variables are key value pair 
+## its used when we deploy the code in different env and key is same and values are changing based on environment like dev,test etc.
+
+name: Environment variables demo
+on: 
+    workflow_dispatch
+env:
+    APP_ENV: "DEV"
+jobs:
+    environment-variables-demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Connecting to env
+              run: echo "App is connecting to $APP_ENV"
+
+
+    
+    
