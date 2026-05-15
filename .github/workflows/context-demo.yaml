@@ -1,3 +1,5 @@
+# Context variables provides the information about the current workflows
+# https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#secrets-context
 name: context variable demo
 on: push
 jobs:
