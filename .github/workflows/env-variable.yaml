@@ -2,7 +2,7 @@
 ## its used when we deploy the code in different env and key is same and values are changing based on environment like dev,test etc.
 ## we can configure the env variables at workflow lavel, job lavel and step lavel 
 
-name: Environment variables demo
+name: Env var demo
 on: 
     workflow_dispatch
 env:
