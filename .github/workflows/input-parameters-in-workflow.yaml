@@ -1,0 +1,20 @@
+#Using inputs/parameters in a workflow file
+## Suppose we have 3 env(DEv,test,prod) to deploy the code I want a workflow to deploy the code in all the 3 envs
+# its better to design a single workflow where we can get the input fro env and artificats  form the user to deploy 
+
+name: Input-Demo
+on: 
+    workflow_dispatch:
+        inputs:
+            environment:
+                description: Choose the environment to deploy
+                required: true
+                default: dev
+jobs:
+    input-demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploying the app
+              run: echo " deploying the app to ${{ inputs.environment}}"
+
+
